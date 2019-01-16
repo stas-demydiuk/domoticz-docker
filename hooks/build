@@ -1,0 +1,12 @@
+#!/bin/bash
+
+declare $(cat version.h | awk '{print $2"="$3}')
+RELEASE_DATE="$(date -d @$APPDATE -u +"%Y-%m-%dT%H:%M:%SZ")"
+echo "Release 4.$APPVERSION-beta from commit $APPHASH ($RELEASE_DATE)";
+
+docker build \
+    --build-arg RELEASE_DATE=$RELEASE_DATE \
+    --build-arg APP_HASH=$APPHASH \
+    -f $DOCKERFILE_PATH \
+    -t $IMAGE_NAME \
+    .

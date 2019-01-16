@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [[ "$DOCKERFILE_PATH" == *.arm32v7 ]];
+then
+    # downloads a local copy of qemu on docker-hub build machines
+    curl -L https://github.com/balena-io/qemu/releases/download/v3.0.0%2Bresin/qemu-3.0.0+resin-arm.tar.gz | tar zxvf - -C . && mv qemu-3.0.0+resin-arm/qemu-arm-static .
+    
+    # download Domoticz build
+    curl --silent https://releases.domoticz.com/releases/beta/version_linux_x86_64.h --output version.h
+    curl --silent https://releases.domoticz.com/releases/beta/domoticz_linux_armv7l.tgz --output domoticz.tgz
+fi
