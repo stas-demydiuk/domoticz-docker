@@ -1,0 +1,10 @@
+#!/bin/bash
+
+declare $(cat version.h | awk '{print $2"="$3}')
+VERSION = "4.$APPVERSION-beta"
+
+if [[ "$DOCKERFILE_PATH" == *.arm32v7 ]];
+then
+    docker tag $IMAGE_NAME $DOCKER_REPO:$VERSION-arm32v7
+    docker push $DOCKER_REPO:$VERSION-arm32v7
+fi
