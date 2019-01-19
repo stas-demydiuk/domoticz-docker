@@ -3,10 +3,11 @@ Domoticz
 
 Domoticz - http://www.domoticz.com/
 
-Docker containers with official Domoticz builds
+Docker containers with official Domoticz beta builds
 
-[![](https://images.microbadger.com/badges/image/demydiuk/domoticz:latest-arm32v7.svg)](https://microbadger.com/images/demydiuk/domoticz:latest-arm32v7 "Get your own image badge on microbadger.com")
-[![](https://images.microbadger.com/badges/license/demydiuk/domoticz:latest-arm32v7.svg)](https://microbadger.com/images/demydiuk/domoticz:latest-arm32v7 "Get your own license badge on microbadger.com")
+[![](https://images.microbadger.com/badges/image/demydiuk/domoticz.svg)](https://microbadger.com/images/demydiuk/domoticz "Get your own image badge on microbadger.com")
+[![](https://images.microbadger.com/badges/version/demydiuk/domoticz.svg)](https://microbadger.com/images/demydiuk/domoticz "Get your own version badge on microbadger.com")
+[![](https://images.microbadger.com/badges/license/demydiuk/domoticz.svg)](https://microbadger.com/images/demydiuk/domoticz "Get your own license badge on microbadger.com")
 
 ## How to use
 

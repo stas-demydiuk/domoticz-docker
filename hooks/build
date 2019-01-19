@@ -4,6 +4,10 @@ declare $(cat version.h | awk '{print $2"="$3}')
 RELEASE_DATE="$(date -d @$APPDATE -u +"%Y-%m-%dT%H:%M:%SZ")"
 echo "Release 4.$APPVERSION-beta from commit $APPHASH ($RELEASE_DATE)";
 
+# Remove double quotes in APPHASH
+APPHASH="${APPHASH%\"}"
+APPHASH="${APPHASH#\"}"
+
 docker build \
     --build-arg BUILD_DATE=$RELEASE_DATE \
     --build-arg APP_HASH=$APPHASH \
