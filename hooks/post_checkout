@@ -15,6 +15,8 @@ then
     # download Domoticz build
     curl --silent https://releases.domoticz.com/releases/beta/version_linux_x86_64.h --output version.h
     curl --silent https://releases.domoticz.com/releases/beta/domoticz_linux_x86_64.tgz --output domoticz.tgz
-    mkdir domoticz
-    tar xfz domoticz.tgz --directory ./domoticz
 fi
+
+# extract Domoticz
+mkdir domoticz
+tar xfz domoticz.tgz --directory ./domoticz
