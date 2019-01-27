@@ -16,12 +16,10 @@ LABEL org.label-schema.vcs-ref=$APP_HASH \
       org.label-schema.license="GPLv3" \
       org.label-schema.build-date=$BUILD_DATE
 
-COPY domoticz.tgz /opt/domoticz/
+COPY domoticz/ /opt/domoticz/
 WORKDIR /opt/domoticz
 
-RUN tar xfz domoticz.tgz && \
-    rm domoticz.tgz && \
-    chmod +x ./domoticz
+RUN chmod +x ./domoticz
 
 VOLUME /config
 
