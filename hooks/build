@@ -8,9 +8,17 @@ echo "Release 4.$APPVERSION-beta from commit $APPHASH ($RELEASE_DATE)";
 APPHASH="${APPHASH%\"}"
 APPHASH="${APPHASH#\"}"
 
+# Setup ARCH
+PLATFORM="linux/amd64"
+if [[ "$DOCKERFILE_PATH" == *.arm32v7 ]];
+then
+    PLATFORM="linux/arm/v7"
+fi
+
 docker build \
     --build-arg BUILD_DATE=$RELEASE_DATE \
     --build-arg APP_HASH=$APPHASH \
+    --platform $PLATFORM
     -f $DOCKERFILE_PATH \
     -t $IMAGE_NAME \
     .
