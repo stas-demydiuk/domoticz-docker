@@ -1,7 +1,7 @@
 #!/bin/bash
 
 declare $(cat version.h | awk '{print $2"="$3}')
-VERSION="4.$APPVERSION-beta"
+VERSION="2020.1.$APPVERSION-beta"
 
 if [[ "$DOCKERFILE_PATH" == *.arm32v7 ]];
 then
