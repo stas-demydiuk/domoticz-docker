@@ -2,6 +2,7 @@ FROM ubuntu:18.04
 
 RUN apt-get update && \
     apt-get install -y unzip \
+        git \
         libssl1.0.0 \
         libudev-dev libusb-0.1-4 \
         curl libcurl4 libcurl4-gnutls-dev \
@@ -23,6 +24,7 @@ WORKDIR /opt/domoticz
 RUN chmod +x ./domoticz
 
 VOLUME /config
+VOLUME /opt/domoticz/plugins
 
 EXPOSE 8080
 
