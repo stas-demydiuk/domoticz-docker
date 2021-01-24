@@ -25,6 +25,7 @@ WORKDIR /opt/domoticz
 RUN chmod +x ./domoticz
 
 VOLUME /config
+VOLUME /opt/domoticz/plugins
 
 EXPOSE 8080
 
