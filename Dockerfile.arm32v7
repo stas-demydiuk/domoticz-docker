@@ -16,7 +16,7 @@ RUN apt-get update && \
     apt-get install -y unzip \
         libudev-dev libusb-0.1-4 \
         curl libcurl4 libcurl4-gnutls-dev \
-        libpython3.7-dev \
+        libpython3.8-dev \
         tzdata
 
 COPY domoticz/ /opt/domoticz/
