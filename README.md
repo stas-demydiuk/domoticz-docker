@@ -1,5 +1,9 @@
+
 Domoticz
 ======
+
+
+#### ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) This image is not maintained anymore and has been migrated into official [Domoticz docker image](https://hub.docker.com/repository/docker/domoticz/domoticz).
 
 Domoticz - http://www.domoticz.com/
 
